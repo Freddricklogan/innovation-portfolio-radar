@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Innovation Portfolio Radar — three horizons, option value, stage gates</title>
+<meta name="description" content="A three-horizons innovation portfolio with option-value scoring and explicit kill / hold / fund / scale gates, every decision printed with its reason and the thresholds editable. Client-side; sample data.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://freddricklogan.github.io/innovation-portfolio-radar/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1220'/%3E%3Cpath d='M4 26 Q16 4 28 26' fill='none' stroke='%2358a6ff' stroke-width='2'/%3E%3Ccircle cx='9' cy='19' r='3' fill='%233fb950'/%3E%3Ccircle cx='16' cy='10' r='3' fill='%23d29922'/%3E%3Ccircle cx='23' cy='19' r='3' fill='%23f85149'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Freddrick Logan">
+<meta property="og:title" content="Innovation Portfolio Radar — three horizons, option value, stage gates">
+<meta property="og:description" content="Kill, hold, fund or scale — with the reason printed and the thresholds editable. Three-horizons mix against a target.">
+<meta property="og:url" content="https://freddricklogan.github.io/innovation-portfolio-radar/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Innovation Portfolio Radar — three horizons, option value, stage gates">
+<meta name="twitter:description" content="Kill, hold, fund or scale — with the reason printed and the thresholds editable. Three-horizons mix against a target.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Innovation Portfolio Radar","description":"A three-horizons innovation portfolio with option-value scoring and explicit stage gates. Client-side; sample data.","url":"https://freddricklogan.github.io/innovation-portfolio-radar/","applicationCategory":"BusinessApplication","operatingSystem":"Any (Web)","author":{"@type":"Person","name":"Freddrick Logan","url":"https://fredlogan.phd"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<main id="demo-root" class="exec-main">
+  <h2 class="sr-only">Innovation portfolio</h2>
+  <p id="status" class="ipr-statusbar" role="status" aria-live="polite"></p>
+
+  <div class="ipr-two">
+    <section class="ipr-panel" aria-labelledby="radar-heading">
+      <h3 id="radar-heading">Portfolio radar</h3>
+      <p class="ipr-hint">Stage across, horizon down; bubble size is expected value (probability × upside); colour is the gate. Select a bubble or a row.</p>
+      <div id="radar"></div>
+    </section>
+    <section class="ipr-panel" aria-labelledby="summary-heading">
+      <h3 id="summary-heading">Gates and horizon mix</h3>
+      <p class="ipr-hint">Gates decided in order: kill → hold → scale → fund. Mix compares next-stage spend on fund/scale initiatives with the target split.</p>
+      <div class="ipr-summary" id="summary"></div>
+      <p class="ipr-spend" id="spend-line"></p>
+      <div class="ipr-scroll"><table class="ipr-table" id="mix"></table></div>
+    </section>
+  </div>
+
+  <section class="ipr-panel" aria-labelledby="list-heading">
+    <h3 id="list-heading">Initiatives</h3>
+    <p class="ipr-hint">Ordered by option value (expected value minus next-stage cost). Ratio is expected value ÷ next-stage cost.</p>
+    <div class="ipr-scroll"><table class="ipr-table" id="list"></table></div>
+    <div class="ipr-toolbar">
+      <button type="button" class="ipr-btn ipr-btn--primary" id="import-csv">Import CSV</button>
+      <button type="button" class="ipr-btn" id="export-csv">Export CSV</button>
+      <button type="button" class="ipr-btn" id="reset">Reset to sample</button>
+      <input type="file" id="file-csv" accept="text/csv,.csv" class="sr-only" tabindex="-1" aria-label="Initiatives CSV file">
+    </div>
+  </section>
+
+  <div class="ipr-two">
+    <section class="ipr-panel" aria-labelledby="editor-heading">
+      <h3 id="editor-heading">Selected initiative</h3>
+      <p class="ipr-hint">Change any input; the gate and its reason recompute.</p>
+      <div id="editor"></div>
+    </section>
+    <section class="ipr-panel" id="thresholds-panel" aria-labelledby="thr-heading">
+      <h3 id="thr-heading">Gate thresholds</h3>
+      <p class="ipr-hint">Kill: evidence rate below the line once the minimum hypotheses are tested. Hold: stale in stage, or too little evidence at validation or later. Scale: pilot or later and value ratio at or above the line.</p>
+      <div id="thresholds"></div>
+    </section>
+  </div>
+</main>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
