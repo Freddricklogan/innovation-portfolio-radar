@@ -6,7 +6,7 @@
 
 ## 1. Who has this problem
 
-Anyone responsible for a portfolio of things that might not work: a provost's innovation fund, a teaching-and-learning centre, a workforce board seeding pilots, a corporate innovation office. In my own work it is the initiatives around Elevate — advising nudges, employer credential wallets, micro-internships — each with a sponsor, a budget ask, and a different amount of evidence. The problem is not generating initiatives. It is stopping them.
+Anyone responsible for a portfolio of things that might not work: a provost's innovation fund, a teaching-and-learning centre, a workforce board seeding pilots, a corporate innovation office. In my work it is the initiatives around Elevate — advising nudges, employer credential wallets, micro-internships — each with a sponsor, a budget ask, and a different amount of evidence. The problem is not generating initiatives. It is stopping them.
 
 ## 2. The problem, as a scenario
 
