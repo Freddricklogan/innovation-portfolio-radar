@@ -1,0 +1,47 @@
+/* Demo-specific styles. Shell tokens come from shell/exec-shell.css. */
+.ipr-statusbar { margin: 0 0 14px; padding: 8px 12px; border-radius: var(--radius-sm); background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--tone, var(--border)); font-size: .8rem; color: var(--muted); min-height: 2.2em; }
+[data-tone='ok'] { --tone: var(--ok); } [data-tone='warn'] { --tone: var(--warn); } [data-tone='danger'] { --tone: var(--danger); } [data-tone='muted'] { --tone: var(--muted); }
+[data-gate='scale'] { --gate: var(--ok); } [data-gate='fund'] { --gate: var(--accent); } [data-gate='hold'] { --gate: var(--warn); } [data-gate='kill'] { --gate: var(--danger); }
+td[data-tone] { color: var(--tone); font-weight: 600; }
+.ipr-muted { color: var(--muted); font-size: .82rem; margin: 0; }
+.ipr-panel { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 16px; }
+.ipr-panel h3 { margin: 0 0 4px; font-size: 1rem; }
+.ipr-hint { margin: 0 0 12px; font-size: .8rem; color: var(--muted); }
+.ipr-two { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; }
+@media (max-width: 960px) { .ipr-two { grid-template-columns: minmax(0, 1fr); } }
+.ipr-scroll { overflow-x: auto; }
+.ipr-toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.ipr-btn { padding: 7px 12px; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: var(--radius-sm); font: inherit; font-size: .8rem; cursor: pointer; }
+.ipr-btn:hover { background: var(--border); }
+.ipr-btn--primary { background: var(--accent); border-color: var(--accent); color: #07101f; font-weight: 600; }
+.ipr-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 12px; }
+.ipr-count { background: var(--panel-2); border: 1px solid var(--border); border-left: 3px solid var(--gate); border-radius: var(--radius-sm); padding: 8px 10px; }
+.ipr-count__n { font-size: 1.4rem; font-weight: 700; color: var(--gate); }
+.ipr-count__l { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.ipr-spend { font-size: .8rem; color: var(--muted); margin: 0 0 10px; }
+.ipr-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.ipr-table th { text-align: left; font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding: 8px 6px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.ipr-table td { padding: 7px 6px; border-bottom: 1px solid var(--border); font-size: .82rem; white-space: nowrap; }
+.ipr-table tbody th { font-size: .82rem; text-transform: none; letter-spacing: 0; color: var(--text); font-weight: 500; }
+.ipr-table tbody tr[role='button'] { cursor: pointer; }
+.ipr-table tbody tr[role='button']:hover { background: var(--panel-2); }
+.ipr-table tbody tr.is-selected { background: color-mix(in srgb, var(--accent) 12%, var(--panel)); }
+.ipr-table tbody tr:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.ipr-chip { font-size: .68rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; background: color-mix(in srgb, var(--gate) 18%, transparent); color: var(--gate); white-space: nowrap; }
+.ipr-radar { width: 100%; height: auto; display: block; overflow: visible; }
+.ipr-grid { stroke: var(--border); }
+.ipr-axis-label { fill: var(--muted); font-size: 11px; text-anchor: middle; }
+.ipr-axis-label--r { text-anchor: end; }
+.ipr-dot circle { fill: color-mix(in srgb, var(--gate) 35%, transparent); stroke: var(--gate); stroke-width: 1.5; cursor: pointer; }
+.ipr-dot.is-selected circle { stroke-width: 3; }
+.ipr-dot:focus-visible circle { stroke: var(--text); }
+.ipr-dot__label { fill: var(--text); font-size: 9.5px; text-anchor: middle; pointer-events: none; paint-order: stroke; stroke: var(--panel); stroke-width: 3px; stroke-linejoin: round; }
+.ipr-selected { margin: 0 0 8px; font-weight: 600; }
+.ipr-verdict { border: 1px solid var(--gate); border-left-width: 4px; border-radius: var(--radius-sm); padding: 10px 12px; margin-bottom: 12px; background: color-mix(in srgb, var(--gate) 8%, var(--panel-2)); }
+.ipr-verdict__gate { font-size: 1.1rem; font-weight: 700; color: var(--gate); }
+.ipr-verdict__why { margin: 4px 0 0; font-size: .8rem; }
+.ipr-verdict__nums { margin: 4px 0 0; font-size: .74rem; color: var(--muted); }
+.ipr-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
+.ipr-fields label { display: flex; flex-direction: column; gap: 3px; font-size: .72rem; color: var(--muted); }
+.ipr-fields input, .ipr-fields select { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 4px; padding: 5px 7px; font: inherit; font-size: .8rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
