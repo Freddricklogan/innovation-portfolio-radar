@@ -13,7 +13,7 @@ td[data-tone] { color: var(--tone); font-weight: 600; }
 .ipr-toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
 .ipr-btn { padding: 7px 12px; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: var(--radius-sm); font: inherit; font-size: .8rem; cursor: pointer; }
 .ipr-btn:hover { background: var(--border); }
-.ipr-btn--primary { background: var(--accent); border-color: var(--accent); color: #07101f; font-weight: 600; }
+.ipr-btn--primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
 .ipr-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 12px; }
 .ipr-count { background: var(--panel-2); border: 1px solid var(--border); border-left: 3px solid var(--gate); border-radius: var(--radius-sm); padding: 8px 10px; }
 .ipr-count__n { font-size: 1.4rem; font-weight: 700; color: var(--gate); }
@@ -27,7 +27,7 @@ td[data-tone] { color: var(--tone); font-weight: 600; }
 .ipr-table tbody tr[role='button']:hover { background: var(--panel-2); }
 .ipr-table tbody tr.is-selected { background: color-mix(in srgb, var(--accent) 12%, var(--panel)); }
 .ipr-table tbody tr:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-.ipr-chip { font-size: .68rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; background: color-mix(in srgb, var(--gate) 18%, transparent); color: var(--gate); white-space: nowrap; }
+.ipr-chip { font-size: .68rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; background: color-mix(in srgb, var(--gate) 14%, transparent); color: var(--text); border: 1px solid color-mix(in srgb, var(--gate) 65%, transparent); white-space: nowrap; }
 .ipr-radar { width: 100%; height: auto; display: block; overflow: visible; }
 .ipr-grid { stroke: var(--border); }
 .ipr-axis-label { fill: var(--muted); font-size: 11px; text-anchor: middle; }
