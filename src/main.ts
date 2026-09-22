@@ -65,6 +65,7 @@ $<HTMLInputElement>('file-csv').addEventListener('change', (e) => {
 $('reset').addEventListener('click', () => { state.initiatives = sampleInitiatives(); state.thresholds = structuredClone(DEFAULT_THRESHOLDS); state.selectedId = 'b'; renderThresholds($('thresholds'), state.thresholds, setThresholds); setStatus('Sample portfolio and thresholds restored.', 'ok'); render(); });
 
 const shell = mountExecShell({
+  theme: 'midnight',
   title: 'Innovation Portfolio Radar',
   tagline: 'A three-horizons innovation portfolio with option-value scoring and explicit kill / hold / fund / scale gates — every gate decision printed with its reason, thresholds editable. Sample portfolio; illustrative.',
   repo: REPO, pagesUrl: PAGES,
